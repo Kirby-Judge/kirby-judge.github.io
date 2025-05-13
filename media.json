@@ -1,0 +1,33 @@
+{
+    "videos": [
+      {
+        "title": "Demo Video 1",
+        "src": "media/video1.mp4"
+      },
+      {
+        "title": "Demo Video 2",
+        "src": "media/video2.webm"
+      }
+    ],
+    "audios": [
+      {
+        "title": "Demo Audio 1",
+        "src": "media/audio1.mp3"
+      },
+      {
+        "title": "Demo Audio 2",
+        "src": "media/audio2.ogg"
+      }
+    ],
+    "texts": [
+      {
+        "title": "Text Demo 1",
+        "content": "Input: Hello, world!\\nOutput: Greetings from Kirby-Judge."
+      },
+      {
+        "title": "Text Demo 2",
+        "content": "Input: The quick brown fox…\\nOutput: Kirby-Judge analyzes text data efficiently."
+      }
+    ]
+  }
+  

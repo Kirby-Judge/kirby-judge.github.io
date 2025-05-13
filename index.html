@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kirby-Judge Examples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kirby-Judge Examples</h1>
+  </header>
+
+  <main id="content">
+    <!-- Sections will be injected here -->
+  </main>
+
+  <h2>🎬 Sample Video</h2>
+  <video controls src="https://www.w3schools.com/html/mov_bbb.mp4">
+    Your browser doesn’t support video.
+  </video>
+
+  <h2>🔊 Sample Audio</h2>
+  <audio controls src="https://www.w3schools.com/html/horse.mp3">
+    Your browser doesn’t support audio.
+  </audio>
+
+  <h2>📄 Text Placeholder</h2>
+  <pre>
+Input: “Hello, world!”
+Output: “Kirby-Judge demo is live.”  
+  </pre>
+
+  <!-- <script>
+    fetch('media.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('content');
+
+        // Videos
+        data.videos.forEach(v => {
+          const sec = document.createElement('section');
+          sec.innerHTML = `
+            <h2>🎬 ${v.title}</h2>
+            <video src="${v.src}" controls></video>
+          `;
+          container.appendChild(sec);
+        });
+
+        // Audios
+        data.audios.forEach(a => {
+          const sec = document.createElement('section');
+          sec.innerHTML = `
+            <h2>🔊 ${a.title}</h2>
+            <audio src="${a.src}" controls></audio>
+          `;
+          container.appendChild(sec);
+        });
+
+        // Text Demos
+        data.texts.forEach(t => {
+          const sec = document.createElement('section');
+          sec.innerHTML = `
+            <h2>📄 ${t.title}</h2>
+            <pre>${t.content}</pre>
+          `;
+          container.appendChild(sec);
+        });
+      })
+      .catch(err => console.error('Failed to load media.json:', err));
+  </script> -->
+</body>
+</html>
