@@ -1,73 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kirby-Judge Examples</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <img src="images/kirby-on-the-star.png" alt="Kirby" class="kirby-logo">
     <h1>Kirby-Judge Examples</h1>
   </header>
 
-  <main id="content">
-    <!-- Sections will be injected here -->
+  <main>
+    <!-- Video Examples Section -->
+    <section id="video-examples">
+      <h2>🎬 Evaluate Video Generation Task!</h2>
+      <div class="example-box">
+        <h3>Example 1</h3>
+
+        <!-- User label -->
+        <div class="label user-label">👤 User</div>
+        <!-- User prompt box -->
+        <div class="chat-box user-box">
+          <div class="message">Generate a video "a donut on the top of broccoli, front view".</div>
+        </div>
+
+        <!-- Video comparison -->
+        <div class="media-row">
+          <figure>
+            <video src="media/video1.mp4" controls></video>
+            <figcaption><strong>Assistant A</strong></figcaption>
+          </figure>
+          <figure>
+            <video src="media/video2.mp4" controls></video>
+            <figcaption><strong>Assistant B</strong></figcaption>
+          </figure>
+        </div>
+
+        <!-- Judge label -->
+        <div class="label judge-label">
+          <img src="images/kirby-from-star.png" alt="Judge" class="label-icon">
+          Judge
+        </div>
+        <!-- Judge response box -->
+        <div class="chat-box judge-box">
+          <div class="message">
+            <strong>&lt;think&gt;</strong><br>
+              Assistant A's video is quite accurate in terms of the visual representation of the prompt "a donut on the top of broccoli, front view." Here's a detailed breakdown of how the video aligns with the prompt:<br><br>
+              
+              1. <strong>Alignment with Prompt</strong>: The video clearly shows a donut placed on top of a broccoli floret, which aligns well with the description. The broccoli is in the foreground, and the donut is placed on top, which is consistent with the front view requirement. The donut is also decorated with blue icing, which might be a creative interpretation, but it does not detract from the accuracy in terms of the basic elements (broccoli and donut).<br><br>
+              
+              2. <strong>Naturalness and Visual Quality</strong>: The broccoli and the donut are both rendered in a way that is somewhat realistic, though the blue icing on the donut might be seen as a creative or artistic choice. The broccoli appears to be a standard broccoli floret, and the donut is depicted in a way that is consistent with typical donut designs, which adds to the naturalness and visual quality of the scene.<br><br>
+              
+              3. <strong>Consistency and Coherence</strong>: The video maintains a consistent and coherent scene, with the broccoli and donut clearly visible and the donut positioned correctly on top of the broccoli. This coherence is important in maintaining the clarity of the visual representation.<br><br>
+              
+              4. <strong>Dynamic and Visual Appealing</strong>: The video does not show any dynamic movement, but the still image effectively captures the essence of the prompt. The visual appeal is quite good, with the blue icing on the donut adding a vibrant contrast to the green broccoli, which makes the scene visually interesting.<br><br>
+              
+              In contrast, let's consider what might be wrong with the video from Assistant B:<br><br>
+              
+              - <strong>Alignment with Prompt</strong>: The video from Assistant B does not clearly show a donut on top of broccoli. Instead, it appears to show a donut with a broccoli-like texture or a broccoli-shaped donut, which might be a creative interpretation, but it does not align well with the typical understanding of a donut on broccoli. This could be seen as less accurate in terms of the prompt.<br><br>
+              
+              - <strong>Naturalness and Visual Quality</strong>: The broccoli in the video from Assistant B might be interpreted as a broccoli-shaped donut, which might be a creative interpretation, but it does not clearly represent a broccoli in the traditional sense. This could be seen as less natural in the context of the prompt.<br><br>
+              
+              - <strong>Consistency and Coherence</strong>: The video from Assistant B might be less coherent in terms of the prompt, as it does not clearly show a donut on top of broccoli. This could lead to confusion or misinterpretation.<br><br>
+              
+              - <strong>Dynamic and Visual Appealing</strong>: The video from Assistant B might be less visually appealing because the broccoli-like texture on the donut might be less clear or less realistic, which could detract from the overall visual quality.<br><br>
+              
+              Given these considerations, the video from Assistant A is more accurate in aligning with the prompt, and it maintains a consistent and coherent visual representation, which might be more aligned with the typical understanding of a donut on broccoli. Therefore, it would be more accurate to say that Assistant A's video is better in terms of the prompt's requirements.
+              <strong>&lt;/think&gt;</strong><br><br>
+              
+              <strong>&lt;answer&gt;<span class="highlight">[[A&gt;B]]</span>&lt;/answer&gt;</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Audio Examples Section -->
+    <section id="audio-examples">
+      <h2>🔊 Evaluate Audio MOS Score!</h2>
+      <div class="example-box">
+        <h3>Example 1</h3>
+
+        <!-- User label -->
+        <div class="label user-label">👤 User</div>
+        <!-- User prompt box -->
+        <div class="chat-box user-box">
+          <div class="message">Generate clear, natural, and understandable high-quality speech audio.</div>
+        </div>
+
+        <!-- Single audio output (inline label) -->
+        <div class="media-row single">
+          <figure class="audio-inline">
+            <figcaption><strong>Assistant&nbsp;&nbsp;</strong></figcaption>
+            <audio src="media/audio1.wav" controls></audio>
+          </figure>
+        </div>
+
+        <!-- Ground-truth MOS -->
+        <div class="mos-box">
+          Ground-truth MOS: <span class="mos-value">4.3</span>
+        </div>
+        <br>
+
+        <!-- Judge label -->
+        <div class="label judge-label">
+          <img src="images/kirby-from-star.png" alt="Judge" class="label-icon">
+          Judge
+        </div>
+        <!-- Judge response box -->
+        <div class="chat-box judge-box">
+          <div class="message">
+            <strong>&lt;think&gt;</strong><br>
+            Assistant’s speech is quite clear and understandable, which is a significant improvement over a very bad or poor quality speech. However, the speech is somewhat artificial in tone, which might be a result of the AI’s attempt to generate natural speech. Here’s a detailed breakdown:<br><br>
+            1. <strong>Clarity and Understandability</strong>: The speech provided by the AI is clear and understandable. Each phrase is distinct and easy to follow, which is a good sign. This clarity is a crucial aspect in evaluating the quality of speech generation.<br><br>
+
+            2. <strong>Naturalness</strong>: While the speech is clear, it does not sound entirely natural. The tone and intonation might be slightly robotic or overly mechanical, which can be a sign that the AI might be struggling to fully mimic human speech patterns. This could be due to the limitations in the AI’s ability to fully understand and replicate the nuances of human speech.<br><br>
+
+            3. <strong>High-Quality Audio</strong>: The audio quality seems to be good, as the speech is clear and the words are distinct. There are no noticeable distortions or background noises that would detract from the clarity.<br><br>
+
+            4. <strong>Content</strong>: The content of the speech is somewhat abstract and might not be immediately relatable to a typical conversation or narrative. This could be a result of the AI’s attempt to generate a specific scenario or narrative, which might not be the most natural or relatable to a human audience.<br><br>
+
+            Given these observations, the speech quality is quite good, but the naturalness could be improved. The clarity and understandability are strong points, but the slight artificiality in the tone might be a drawback.
+            <strong>&lt;/think&gt;</strong><br><br>
+            
+            <strong>&lt;answer&gt;<span class="highlight">4.5</span>&lt;/answer&gt;</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="example-box">
+        <h3>Example 2</h3>
+
+        <!-- User label -->
+        <div class="label user-label">👤 User</div>
+        <!-- User prompt box -->
+        <div class="chat-box user-box">
+          <div class="message">Generate clear, natural, and understandable high-quality speech audio.</div>
+        </div>
+
+        <!-- Single audio output (inline label) -->
+        <div class="media-row single">
+          <figure class="audio-inline">
+            <figcaption><strong>Assistant&nbsp;&nbsp;</strong></figcaption>
+            <audio src="media/audio2.wav" controls></audio>
+            <em>(The audio is very quiet. We recommend volume up)</em>
+          </figure>
+        </div>
+        
+        <!-- Ground-truth MOS -->
+        <div class="mos-box">
+          Ground-truth MOS: <span class="mos-value">1.2</span>
+        </div>
+        <br>
+        <!-- Judge label -->
+        <div class="label judge-label">
+          <img src="images/kirby-from-star.png" alt="Judge" class="label-icon">
+          Judge
+        </div>
+        <!-- Judge response box -->
+        <div class="chat-box judge-box">
+          <div class="message">
+            <strong>&lt;think&gt;</strong><br>
+            Assistant’s answer is significantly flawed in terms of clarity, naturalness, and audio quality, which are the key aspects of the question asked. Here’s a detailed breakdown of the issues:<br><br>
+            1. <strong>Clarity and Naturalness</strong>: <br>
+            - The speech generated by the AI is highly distorted and noisy, making it difficult to understand any specific words or phrases. This is evident from the presence of loud, sharp sounds that do not align with typical speech patterns.<br>   
+            - The phrase “rice of third film” does not make sense in a natural or clear context, which suggests that the AI might have misinterpreted or generated nonsensical words.<br><br>
+            
+            2. <strong>Audio Quality:</strong><br>  
+            - The audio quality is extremely poor, with a lot of noise and what appears to be a distorted or malfunctioning sound system. This kind of audio would be difficult to listen to and would likely be considered very bad in terms of audio quality standards.<br><br>
+            
+            3. <strong>Relevance and Accuracy:</strong><br>   
+            - The content “rice of third film” does not seem relevant or accurate to the question asked, which was to generate clear, natural, and understandable speech. This indicates a significant deviation from the intended task, leading to an inaccurate or irrelevant response.<br><br>
+            
+            Given these issues, it is clear that the speech generated by the AI does not meet the criteria set in the question. The audio is neither clear, natural, nor of high quality, and the content is nonsensical, which would significantly impact the overall score.
+            <strong>&lt;/think&gt;</strong><br><br>
+            
+            <strong>&lt;answer&gt;<span class="highlight">1.0</span>&lt;/answer&gt;</strong>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <hr>
+
+    <!-- Audio Examples Section -->
+    <section id="audio-examples">
+      <h2>🔊 Evaluate Speaker Similarity!</h2>
+      <div class="example-box">
+        <h3>Example 1</h3>
+
+        <!-- User label -->
+        <div class="label user-label">👤 User</div>
+        <!-- User prompt box -->
+        <div class="chat-box user-box">
+          <div class="message">Evaluate if these two speech audios share the same speaker.</div>
+        </div>
+
+        <!-- Single audio output (inline label) -->
+        <div class="media-row single">
+          <figure class="audio-inline">
+            <audio src="media/speaker1_1.wav" controls></audio>
+            <audio src="media/speaker1_2.wav" controls></audio>
+          </figure>
+        </div>
+
+        <!-- User label -->
+        <div class="label user-label">🤖 Assistant</div>
+        <!-- User prompt box -->
+        <div class="chat-box user-box">
+          <div class="message">The given two audios are from the same speaker.</div>
+        </div>
+
+        <!-- Ground-truth MOS -->
+        <div class="mos-box">
+          Ground-truth SS Score: <span class="mos-value">1.5</span>
+        </div>
+        <div class="mos-box">
+          Ground-truth Speaker Match: <span class="mos-value">Not matching</span>
+        </div>
+        <br>
+
+        <!-- Judge label -->
+        <div class="label judge-label">
+          <img src="images/kirby-from-star.png" alt="Judge" class="label-icon">
+          Judge
+        </div>
+        <!-- Judge response box -->
+        <div class="chat-box judge-box">
+          <div class="message">
+            <strong>&lt;think&gt;</strong><br>
+            Assistant's answer is incorrect. To accurately determine if the two speech audios are from the same speaker, we need to carefully analyze the characteristics such as vocal quality, tone, pitch, accent, and intonation, which are the key factors in distinguishing between different speakers.<br><br>
+            
+            <strong>Step 1: Analyze Vocal Quality</strong><br>
+            - <strong>Audio 1:</strong> The speaker in the first audio has a clear, steady voice with a moderate pitch and a consistent tone. The speech is delivered in a way that suggests a professional or formal setting, which might be indicative of someone who is accustomed to speaking in public or in a professional context.<br>
+            - <strong>Audio 2:</strong> The speaker in the second audio has a more casual tone, and the speech is delivered in a more informal manner. This could suggest a different level of comfort or familiarity with the topic being discussed, which might be different from the first audio.<br><br>
+            
+            <strong>Step 2: Analyze Tone and Pitch</strong><br>
+            - <strong>Tone:</strong> The tone in the first audio is steady and professional, which might be expected from someone who is confident and experienced in speaking in a public or professional setting. In contrast, the tone in the second audio is more casual, which might be expected from someone who is more comfortable in a personal or informal setting.<br>
+            - <strong>Pitch:</strong> The pitch in both audios seems to be within a similar range, but the tone and delivery might differ significantly, which can be a key factor in distinguishing between speakers.<br><br>
+            
+            <strong>Step 3: Analyze Accent and Intonation</strong><br>
+            - <strong>Accent:</strong> Both audios do not provide clear evidence of a specific accent, but the way the words are pronounced and the intonation might differ. The first audio might have a more formal or professional intonation, while the second audio might have a more casual or informal intonation.<br>
+            - <strong>Intonation:</strong> The intonation in the first audio is consistent with a professional or formal speech, whereas the second audio might have a more relaxed or casual intonation, which could be indicative of a different speaker.<br><br>
+            
+            <strong>Conclusion:</strong><br>
+            Given the differences in tone, pitch, and the overall style of speech, it is likely that the two audios are from different speakers. The first audio suggests a more professional or formal speaker, while the second audio suggests a more casual or informal speaker. Therefore, the correct answer would be that the two audios are not from the same speaker.
+            <strong>&lt;/think&gt;</strong><br><br>
+            
+            <strong>&lt;answer&gt;<span class="highlight">2.5</span>&lt;/answer&gt;</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="example-box">
+        <h3>Example 2</h3>
+
+        <!-- User label -->
+        <div class="label user-label">👤 User</div>
+        <!-- User prompt box -->
+        <div class="chat-box user-box">
+          <div class="message">Evaluate if these two speech audios share the same speaker.</div>
+        </div>
+
+        <!-- Single audio output (inline label) -->
+        <div class="media-row single">
+          <figure class="audio-inline">
+            <audio src="media/speaker2_1.wav" controls></audio>
+            <audio src="media/speaker2_2.wav" controls></audio>
+          </figure>
+        </div>
+
+        <!-- User label -->
+        <div class="label user-label">🤖 Assistant</div>
+        <!-- User prompt box -->
+        <div class="chat-box user-box">
+          <div class="message">The given two audios are from the same speaker.</div>
+        </div>
+
+        <!-- Ground-truth MOS -->
+        <div class="mos-box">
+          Ground-truth SS Score: <span class="mos-value">4.5</span>
+        </div>
+        <div class="mos-box">
+          Ground-truth Speaker Match: <span class="mos-value">Matching</span>
+        </div>
+        <br>
+
+        <!-- Judge label -->
+        <div class="label judge-label">
+          <img src="images/kirby-from-star.png" alt="Judge" class="label-icon">
+          Judge
+        </div>
+        <!-- Judge response box -->
+        <div class="chat-box judge-box">
+          <div class="message">
+            <strong>&lt;think&gt;</strong><br>
+            Assistant's answer is accurate in identifying that the two audio clips are from the same speaker. Here's a detailed analysis of why this conclusion is correct:<br><br>
+            
+            1. <strong>Voice Characteristics</strong>: Both audio clips feature a female voice, which is a clear indication that the speaker is the same person. The voice quality, tone, and pitch are consistent throughout both clips, suggesting that the speaker is the same individual.<br><br>
+            
+            2. <strong>Speech Style and Content</strong>: The speech content in both clips is consistent with a narrative or descriptive style, which is typical in interviews or personal stories. Both speakers are discussing personal experiences and future plans, which aligns well with the context provided in the speech subtitles.<br><br>
+            
+            3. <strong>Emotional Tone</strong>: The emotional tone in both clips is similar, reflecting a mix of excitement and nervousness. This consistency in emotional tone can be a strong indicator that the same person is speaking, as the emotional state often reflects the speaker's personal feelings and experiences.<br><br>
+            
+            4. <strong>Accent and Intonation</strong>: Both audio clips exhibit a similar accent and intonation, which can be a significant factor in identifying the same speaker. The way the speaker articulates words and the rhythm of speech can be quite distinctive and can help in recognizing the same person.<br><br>
+            
+            Given these observations, it is reasonable to conclude that the two audio clips are indeed from the same speaker, as the voice characteristics, speech style, emotional tone, and accent all align consistently across both clips.
+            <strong>&lt;/think&gt;</strong><br><br>
+            
+            <strong>&lt;answer&gt;<span class="highlight">4.8</span>&lt;/answer&gt;</strong>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
   </main>
-
-  <h2>🎬 Sample Video</h2>
-  <video controls src="https://www.w3schools.com/html/mov_bbb.mp4">
-    Your browser doesn’t support video.
-  </video>
-
-  <h2>🔊 Sample Audio</h2>
-  <audio controls src="https://www.w3schools.com/html/horse.mp3">
-    Your browser doesn’t support audio.
-  </audio>
-
-  <h2>📄 Text Placeholder</h2>
-  <pre>
-Input: “Hello, world!”
-Output: “Kirby-Judge demo is live.”  
-  </pre>
-
-  <!-- <script>
-    fetch('media.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('content');
-
-        // Videos
-        data.videos.forEach(v => {
-          const sec = document.createElement('section');
-          sec.innerHTML = `
-            <h2>🎬 ${v.title}</h2>
-            <video src="${v.src}" controls></video>
-          `;
-          container.appendChild(sec);
-        });
-
-        // Audios
-        data.audios.forEach(a => {
-          const sec = document.createElement('section');
-          sec.innerHTML = `
-            <h2>🔊 ${a.title}</h2>
-            <audio src="${a.src}" controls></audio>
-          `;
-          container.appendChild(sec);
-        });
-
-        // Text Demos
-        data.texts.forEach(t => {
-          const sec = document.createElement('section');
-          sec.innerHTML = `
-            <h2>📄 ${t.title}</h2>
-            <pre>${t.content}</pre>
-          `;
-          container.appendChild(sec);
-        });
-      })
-      .catch(err => console.error('Failed to load media.json:', err));
-  </script> -->
 </body>
 </html>
